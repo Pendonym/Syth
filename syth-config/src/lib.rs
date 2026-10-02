@@ -2,11 +2,10 @@ use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 use std::{fs, path::Path};
 
-/// Minecraft Classic server properties.
+/// Minecraft Classic server.properties from https://minecraft.wiki/w/Server.properties#Java_Edition_Classic
 #[derive(Debug, Deserialize, Serialize, Clone)]
 #[serde(default)]
 pub struct Config {
-    // https://minecraft.wiki/w/Server.properties#Java_Edition_Classic
     pub server_name: String,
     pub motd: String,
     pub ip: String,
@@ -57,6 +56,7 @@ impl Config {
     }
 }
 
+// AI start
 pub fn data_dir() -> PathBuf {
     let dir = match std::env::var_os("CARGO_MANIFEST_DIR") {
         Some(manifest) => PathBuf::from(manifest)
@@ -72,3 +72,4 @@ pub fn data_dir() -> PathBuf {
     std::fs::create_dir_all(&dir).ok();
     dir
 }
+// AI end
