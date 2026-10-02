@@ -2,7 +2,8 @@ use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 use std::{fs, path::Path};
 
-/// Minecraft Classic server.properties from https://minecraft.wiki/w/Server.properties#Java_Edition_Classic
+// Minecraft Classic server.properties from https://minecraft.wiki/w/Server.properties#Java_Edition_Classic
+// TODO check if https://minecraft.wiki/w/Minecraft_Wiki:Projects/wiki.vg_merge/Classic%20Protocol%20Extension has anything (99.99% sure it wont since its protocol shit)
 #[derive(Debug, Deserialize, Serialize, Clone)]
 #[serde(default)]
 pub struct Config {
