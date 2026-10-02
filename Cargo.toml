@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+  "syth-config", "syth-server",
+]
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+toml = "0.9"
+toml_edit = "0.23"

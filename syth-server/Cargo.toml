@@ -1,0 +1,7 @@
+[package]
+name = "syth-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+syth-config = { path = "../syth-config" }
