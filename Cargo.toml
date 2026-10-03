@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-  "syth-config", "syth-server",
+  "syth-config", "syth-world", "syth-server",
 ]
 
 [workspace.dependencies]

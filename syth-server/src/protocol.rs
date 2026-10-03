@@ -2,6 +2,8 @@ pub mod packet_ids {
     pub const IDENTIFICATION: u8 = 0x00;
     pub const PING: u8 = 0x01;
     pub const LEVEL_INIT: u8 = 0x02;
+    pub const LEVEL_DATA_CHUNK: u8 = 0x03;
+    pub const LEVEL_FINALIZE: u8 = 0x04;
 }
 
 fn read_string(b: &[u8]) -> String {
@@ -15,7 +17,7 @@ fn write_string(buf: &mut Vec<u8>, string: &str) {
     buf.extend_from_slice(&b);
 }
 
-pub fn server_indentification(server_name: &str, motd: &str) -> Vec<u8> {
+pub fn server_identification(server_name: &str, motd: &str) -> Vec<u8> {
     let mut buf = Vec::<u8>::with_capacity(131);
     buf.push(packet_ids::IDENTIFICATION);
     buf.push(7);

@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 reqwest.workspace = true
 syth-config = { path = "../syth-config" }
+syth-world = { path = "../syth-world" }
