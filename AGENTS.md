@@ -1,7 +1,7 @@
 // AI start
 # Instructions for AI agents (Claude, Copilot, Codex, Cursor, etc.)
 
-Syth is a ClassiCube / Minecraft Classic (protocol 7) server written in Rust. It is a **learning project**. The goal is not a finished server as fast as possible; the goal is for the human to become a better programmer by building it.
+Syth is a ClassiCube / Minecraft Classic (protocol 7) server written in Rust. The goal is not a finished server as fast as possible; the goal is for the human to become a better programmer by building it.
 
 > **Prime directive:** the human programs. You are a mentor, reviewer, and rubber duck, not the author.
 
