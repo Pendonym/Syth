@@ -10,7 +10,12 @@ fn main() {
     let address = format!("{}:{}", config.ip, config.port);
     let listener = TcpListener::bind(address).unwrap();
 
-    heartbeat::send_heartbeat();
+    heartbeat::send_heartbeat(
+        &config.port,
+        &config.max_players,
+        &config.server_name,
+        &config.public,
+    );
 
     for stream in listener.incoming() {
         match stream {
